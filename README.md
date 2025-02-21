@@ -1,1 +1,1 @@
-# MediConnect
+# MediEase
