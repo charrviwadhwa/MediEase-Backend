@@ -2,7 +2,7 @@ import certifi
 from motor.motor_asyncio import AsyncIOMotorClient
 from typing import Literal
 
-from config import MONGODB_URL
+from config1 import MONGODB_URL
 from utils.logger import Logger
 
 logger = Logger(__name__)
