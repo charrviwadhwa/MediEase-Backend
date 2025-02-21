@@ -2,11 +2,17 @@ import certifi
 from motor.motor_asyncio import AsyncIOMotorClient
 from typing import Literal
 
-from config1 import MONGODB_URL
+#from config1 import MONGODB_URL
 from utils.logger import Logger
+import os
+from dotenv import load_dotenv
+
+load_dotenv() 
+MONGODB_URL = os.getenv("MONGODB_URL", "mongodb://127.0.0.1:27017/meditrack") 
 
 logger = Logger(__name__)
-MONGODB_URL = "mongodb://127.0.0.1:27017/meditrack"
+
+#MONGODB_URL = "mongodb://127.0.0.1:27017/meditrack"
 client = AsyncIOMotorClient(MONGODB_URL)
 
 DB = client["meditrack"]
