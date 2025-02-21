@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from typing import Literal
 from utils import database
 from utils.logger import Logger
-from fastapi.staticfiles import StaticFiles
+#from fastapi.staticfiles import StaticFiles
 
 
 
@@ -18,7 +18,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
+#pp.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
 
 @app.get("/")
 async def root():
